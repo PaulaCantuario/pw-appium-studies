@@ -6,7 +6,7 @@ POC de automação mobile usando Playwright como test runner e Appium para comun
 
 > O WebDriverIO seria suficiente para testes mobile, então uso do Playwright em conjunto com o WebDriver foi uma decisão voltada principalmente para a experiência de equipes que já possuem conhecimento em Playwright, pois reduz significativamente a curva de aprendizado para QAs com familiaridade com essa ferramenta. 
 
-Com essa abordagem, a equipe consegue aproveitar conhecimentos previamente adquiridos sobre estruturação de testes, organização do código, padrões de desenvolvimento e manutenção, acelerando a produtividade e facilitando a adoção da solução sem comprometer as capacidades oferecidas pelo WebDriver.
+> Com essa abordagem, a equipe consegue aproveitar conhecimentos previamente adquiridos sobre estruturação de testes, organização do código, padrões de desenvolvimento e manutenção, acelerando a produtividade e facilitando a adoção da solução sem comprometer as capacidades oferecidas pelo WebDriver.
 
 ---
 
