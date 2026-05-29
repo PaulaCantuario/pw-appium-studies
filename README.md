@@ -338,6 +338,9 @@ npm run appium
 npm test
 ```
 
+Antes de executar os testes, é necessário encerrar a sessão do Appium Inspector!
+O Appium só permite uma sessão por vez no mesmo dispositivo. Se o Inspector estiver com uma sessão ativa, o teste vai tentar criar outra e vai falhar com erro de sessão conflitante.
+
 ---
 
 ## Tecnologias

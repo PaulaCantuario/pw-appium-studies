@@ -6,11 +6,15 @@ const capabilities = {
   platformName: 'Android', 
   'appium:automationName': 'UiAutomator2', // driver que o Appium vai usar
   'appium:deviceName': 'emulator-5554', // nome do emulador (veja com: adb devices)
-  'appium:app': '../../apk/mda-2.2.0-25.apk', // caminho do APK
+  'appium:app': 'C:/sources/pw-appium-studies/apk/mda-2.2.0-25.apk', // caminho do APK, precisa trocar pro seu caminho local
   'appium:appPackage': 'com.saucelabs.mydemoapp.android', // package name do app
   'appium:noReset': false, // false = limpa dados entre sessões
+  'appium:appActivity': 'com.saucelabs.mydemoapp.android.view.activities.SplashActivity', // activity principal do app
+  'appium:autoGrantPermissions': true,  // aceita permissões automaticamente
   'appium:newCommandTimeout': 240,           // tempo máximo sem comandos antes de encerrar
 };
+
+
 
 // Cria e retorna uma sessão Appium
 export async function createDriver() {
