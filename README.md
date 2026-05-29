@@ -231,7 +231,7 @@ npm run appium
 npx playwright test
 
 ```
-[Clique aqui para ver o exemplo de execução do teste de login](C:\sources\pw-appium-studies\Exemplo_execucao.mp4)
+[Clique aqui para ver o exemplo de execução do teste de login](./Exemplo_execucao.mp4)
 
 
 ## Appium Inspector
