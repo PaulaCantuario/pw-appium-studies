@@ -4,6 +4,10 @@ POC de automação mobile usando Playwright como test runner e Appium para comun
 
 > Objetivo: servir como base de referência para times de QA que queiram iniciar automação mobile com essa stack.
 
+> O WebDriverIO seria suficiente para testes mobile, então uso do Playwright em conjunto com o WebDriver foi uma decisão voltada principalmente para a experiência de equipes que já possuem conhecimento em Playwright, pois reduz significativamente a curva de aprendizado para QAs com familiaridade com essa ferramenta. 
+
+Com essa abordagem, a equipe consegue aproveitar conhecimentos previamente adquiridos sobre estruturação de testes, organização do código, padrões de desenvolvimento e manutenção, acelerando a produtividade e facilitando a adoção da solução sem comprometer as capacidades oferecidas pelo WebDriver.
+
 ---
 
 ## Entendendo a Arquitetura
@@ -82,14 +86,6 @@ PATH += %ANDROID_HOME%\emulator
 PATH += %ANDROID_HOME%\cmdline-tools\latest\bin
 ```
 
-**Mac/Linux** — adicione no `~/.zshrc` ou `~/.bashrc`:
-```bash
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-```
-
 Após configurar, reabra o terminal e verifique:
 
 ```bash
@@ -163,14 +159,15 @@ adb shell pm list packages | grep saucelabs
 pw-appium-studies/
 ├── apk/
 │   └── mda-2.2.0-25.apk
+├── support/
+│   └── fixtures/
+│       └── base.ts
+│   └── helpers/
+│       └── drive.ts
+│   └── pages/
+│       └── loginPage.ts
 ├── tests/
 │   └── login.spec.ts
-├── pages/
-│   └── LoginPage.ts
-├── fixtures/
-│   └── base.ts
-├── helpers/
-│   └── driver.ts
 ├── playwright.config.ts
 ├── tsconfig.json
 └── package.json
@@ -319,9 +316,10 @@ npm run appium
 
 # 5. abre o Appium Inspector → cola as capabilities → Start Session
 #    inspeciona os elementos → copia os seletores → monta os Page Objects
+#    finaliza sessão
 
 # 6. roda os testes
-npm test
+npx playwright test
 ```
 
 Antes de executar os testes, é necessário encerrar a sessão do Appium Inspector!
