@@ -8,7 +8,7 @@ const capabilities = {
   'appium:deviceName': 'emulator-5554', // nome do emulador (veja com: adb devices)
   'appium:app': 'C:/sources/pw-appium-studies/apk/mda-2.2.0-25.apk', // caminho do APK, precisa trocar pro seu caminho local
   'appium:appPackage': 'com.saucelabs.mydemoapp.android', // package name do app
-  'appium:noReset': false, // false = limpa dados entre sessões
+  'appium:noReset': true, // false = limpa dados entre sessões
   'appium:appActivity': 'com.saucelabs.mydemoapp.android.view.activities.SplashActivity', // activity principal do app
   'appium:autoGrantPermissions': true,  // aceita permissões automaticamente
   'appium:newCommandTimeout': 240,           // tempo máximo sem comandos antes de encerrar

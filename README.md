@@ -228,25 +228,11 @@ npx appium driver list
 npm run appium
 
 # terminal 2 — roda os testes
-npm test
+npx playwright test
 
-# roda com relatório HTML
-npm run test:report
 ```
+[Clique aqui para ver o exemplo de execução do teste de login](C:\sources\pw-appium-studies\Exemplo_execucao.mp4)
 
-Os scripts estão definidos no `package.json`:
-
-```json
-{
-  "scripts": {
-    "appium": "appium",
-    "test": "playwright test",
-    "test:report": "playwright test --reporter=html && playwright show-report"
-  }
-}
-```
-
----
 
 ## Appium Inspector
 

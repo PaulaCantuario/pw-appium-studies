@@ -15,6 +15,7 @@ test.describe('Login', () => {
         await catalogoPage.titleByAccessibilityId.waitForDisplayed({ timeout: 15_000 })
         expect(await catalogoPage.titleByAccessibilityId.isDisplayed()).toBe(true)// aqui valida se apareceu o título da página inicial
 
+        await appMenuPage.appMenuByAccessibilityId.waitForDisplayed({ timeout: 15_000 })
         await appMenuPage.appMenuByAccessibilityId.click()
         await appMenuPage.logoutMenuByAccessibilityId.waitForDisplayed({ timeout: 15_000 })
         expect(await appMenuPage.logoutMenuByAccessibilityId.isDisplayed()).toBe(true)// aqui valida se apareceu o menu Logout, o que indica que o login foi bem sucedido
