@@ -144,7 +144,7 @@ O arquivo já está na pasta `apk/` do projeto.
 
 ```bash
 # com o emulador rodando
-adb install -r C:/sources/pw-appium-studies/apk/mda-2.2.0-25.apk
+adb install -r /pw-appium-studies/apk/mda-2.2.0-25.apk
 
 # confirma que instalou
 adb shell pm list packages | grep saucelabs
